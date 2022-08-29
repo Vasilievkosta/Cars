@@ -88,6 +88,7 @@ function fileincludes() {
 function build() {
     return src([
             'app/**/*.html',
+			'app/fonts/**/*',
             'app/css/style.min.css',
             'app/js/main.min.js'
         ], {

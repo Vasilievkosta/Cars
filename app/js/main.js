@@ -17,9 +17,11 @@ $(function () {
     });
 
 
-    $('.slider__inner').slick({
-        dots: true,
+    $('.booking__slider').slick({
+        dots: false,
         arrows: false,
+		autoplay: true,
+		autoplaySpeed: 4000,		
     });
 
 

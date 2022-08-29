@@ -51,7 +51,8 @@
 		font-style: normal;
 		font-size: 58px;
 		line-height: 1.5;
-		padding-bottom: 20px;
+		padding-bottom: 13px;
+		letter-spacing: -14px;
 
 		@include resp($S) {
 			font-size: 30px;
@@ -233,14 +234,19 @@ path {
 }
 
 .carts {
-	margin-top: -520px;
-	padding-bottom: 70px;
+	margin-top: -590px;
+	padding-bottom: 95px;
+	
+	&__paragraphs {
+		padding-bottom: 70px;
+	}
 
 	&__images {
 		display: flex;
 		justify-content: space-between;
 		text-align: center;
 		margin: 0 30px;
+		margin-top: -70px;
 
 		@include resp($XL) {
 			flex-wrap: wrap;
@@ -249,9 +255,11 @@ path {
 	}
 
 	&__adult {
+		margin-top: -100px;
+		
 		@include resp($XL) {
 			order: 1;
-			margin-top: -100px;
+			
 		}
 
 		@include resp($M) {
@@ -354,19 +362,22 @@ path {
 	}
 }
 
-.booking {
-	position: relative;
+.booking {	
 	padding-top: 20px;
 
-	&::before {
+	&__slide {
+		position: relative;
+		
+		&::before {
 		content: '';
 		background-image: url('../images/booking-bg.png');
 		position: absolute;
 		height: 570px;
 		width: 100%;
 		top: 55px;
-		left: 0;
-	}
+		left: 0;		
+		}	
+	}	
 
 	&__translat {
 
@@ -402,6 +413,7 @@ path {
 
 	&__text {
 		font-size: 17px;
+		margin-top: -30px;
 		margin-bottom: 28px;
 	}
 
@@ -413,6 +425,7 @@ path {
 		position: relative;
 		max-width: calc(100vw / 2);
 		padding-bottom: 100px;
+		
 
 		@include resp($XXL) {
 			min-width: 100%;
@@ -444,7 +457,7 @@ path {
 
 	&__btn {
 		position: absolute;
-		z-index: 5;
+		
 		top: 0;
 		right: 0;
 
@@ -540,7 +553,7 @@ path {
 	}
 
 	&__list {
-		padding: 30px 0;
+		padding-top: 115px;
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
@@ -593,7 +606,7 @@ path {
 }
 
 .contacts {
-	margin-bottom: 100px;
+	margin-bottom: 95px;
 
 	&__wrap {
 		display: flex;
@@ -659,7 +672,7 @@ path {
 .address {
 	font-style: normal;
 	font-size: 18px;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 
 	@include resp($XL) {
 		text-align: center;
@@ -695,7 +708,7 @@ path {
 	}
 
 	&__nav {
-		margin-bottom: 20px;
+		margin-bottom: 5px;
 	}
 
 	&__menu {
@@ -709,7 +722,7 @@ path {
 		font-size: 16px;
 		line-height: 1.2;
 		opacity: 0.6;
-		margin-bottom: 50px;
+		margin-bottom: 25px;
 
 		@include resp($XL) {
 			max-width: 100%;
