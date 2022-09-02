@@ -6,9 +6,7 @@
 @import 'global';
 
 .header {
-	background-repeat: no-repeat;
-	background-size: cover;
-	min-height: 1427px;
+
 
 	&__logo {
 		@include resp($M) {
@@ -36,44 +34,7 @@
 			}
 		}
 	}
-
-	&__content {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		text-align: center;
-		min-height: 802px;
-	}
-
-	&__title {
-		font-family: 'DotGothic16', sans-serif;
-		font-weight: 400;
-		font-style: normal;
-		font-size: 58px;
-		line-height: 1.5;
-		padding-bottom: 13px;
-		letter-spacing: -14px;
-
-		@include resp($S) {
-			font-size: 30px;
-			line-height: 1.2;
-		}
-
-	}
-
-	&__text {
-		font-size: 17px;
-		padding-bottom: 34px;
-	}
-
-	&__btn {
-		@include resp($XL) {
-			margin-bottom: -10px;
-		}
-	}
 }
-
-
 
 .nav {
 	display: flex;
@@ -186,6 +147,65 @@ path {
 	}
 }
 
+.hero {
+	text-align: center;
+	position: relative;
+
+	&::before {
+		content: '';
+		background-image: url('../images/group-bg.png');
+		background-repeat: no-repeat;
+		position: absolute;
+		top: -113px;
+		bottom: -541px;
+		left: 0;
+		right: 0;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		text-align: center;
+		min-height: 675px;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+
+
+	&__title {
+		font-family: 'DotGothic16', sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 58px;
+		line-height: 1.5;
+		padding-bottom: 13px;
+		letter-spacing: -14px;
+		z-index: 1;
+
+
+		@include resp($S) {
+			font-size: 30px;
+			line-height: 1.2;
+		}
+
+	}
+
+	&__text {
+		font-size: 17px;
+		padding-bottom: 34px;
+		z-index: 1;
+	}
+
+	&__btn {
+
+		@include resp($XL) {
+			margin-bottom: -10px;
+		}
+	}
+}
+
 .paragraphs {
 	display: flex;
 	justify-content: space-between;
@@ -234,9 +254,8 @@ path {
 }
 
 .carts {
-	margin-top: -590px;
 	padding-bottom: 95px;
-	
+
 	&__paragraphs {
 		padding-bottom: 70px;
 	}
@@ -256,10 +275,10 @@ path {
 
 	&__adult {
 		margin-top: -100px;
-		
+
 		@include resp($XL) {
 			order: 1;
-			
+
 		}
 
 		@include resp($M) {
@@ -362,22 +381,22 @@ path {
 	}
 }
 
-.booking {	
+.booking {
 	padding-top: 20px;
 
 	&__slide {
 		position: relative;
-		
+
 		&::before {
-		content: '';
-		background-image: url('../images/booking-bg.png');
-		position: absolute;
-		height: 570px;
-		width: 100%;
-		top: 55px;
-		left: 0;		
-		}	
-	}	
+			content: '';
+			background-image: url('../images/booking-bg.png');
+			position: absolute;
+			height: 570px;
+			width: 100%;
+			top: 55px;
+			left: 0;
+		}
+	}
 
 	&__translat {
 
@@ -425,7 +444,7 @@ path {
 		position: relative;
 		max-width: calc(100vw / 2);
 		padding-bottom: 100px;
-		
+
 
 		@include resp($XXL) {
 			min-width: 100%;
@@ -457,7 +476,7 @@ path {
 
 	&__btn {
 		position: absolute;
-		
+
 		top: 0;
 		right: 0;
 
