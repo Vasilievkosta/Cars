@@ -1,27 +1,27 @@
 $(function () {
 
-    $(".menu__list a, .logo, .header__icon, .footer__icon").on("click", function (event) {
-        //отменяем стандартную обработку нажатия по ссылке
-        event.preventDefault();
+    // $(".menu__list a, .logo, .header__icon, .footer__icon").on("click", function (event) {
+    //     //отменяем стандартную обработку нажатия по ссылке
+    //     event.preventDefault();
 
-        //забираем идентификатор бока с атрибута href
-        var id = $(this).attr('href');
+    //     //забираем идентификатор бока с атрибута href
+    //     var id = $(this).attr('href');
 
-        //узнаем высоту от начала страницы до блока на который ссылается якорь
-        var top = $(id).offset().top;
+    //     //узнаем высоту от начала страницы до блока на который ссылается якорь
+    //     var top = $(id).offset().top;
 
-        //анимируем переход на расстояние - top за 1500 мс
-        $('body,html').animate({
-            scrollTop: top
-        }, 1500);
-    });
+    //     //анимируем переход на расстояние - top за 1500 мс
+    //     $('body,html').animate({
+    //         scrollTop: top
+    //     }, 1500);
+    // });
 
 
     $('.booking__slider').slick({
         dots: false,
         arrows: false,
-		autoplay: true,
-		autoplaySpeed: 4000,		
+        autoplay: true,
+        autoplaySpeed: 4000,
     });
 
 
