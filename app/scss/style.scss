@@ -119,6 +119,7 @@ path {
 	}
 
 	&__item {
+		z-index: 1;
 		&:not(:last-child) {
 			margin-right: 43px;
 		}
@@ -142,6 +143,7 @@ path {
 		font-weight: 500;
 		font-size: 18px;
 		transition: color 0.3s;
+		
 
 		&:hover {
 			color: $first;
@@ -659,7 +661,7 @@ path {
 
 	&__item {
 		padding: 35px;
-		border: 2px solid $second;
+		border: 2px solid $hover;
 		border-radius: 5px;
 		display: flex;
 		max-width: 513px;
@@ -671,7 +673,7 @@ path {
 	}
 
 	&__svg {
-		border: 2px solid $second;
+		border: 2px solid $hover;
 		margin-right: 28px;
 		filter: drop-shadow(6px 6px 17px rgba(3, 23, 32, 0.46));
 		border-radius: 20px 4px;
@@ -863,15 +865,12 @@ path {
 	&__social {
 		display: flex;
 	}
+	
+	&__svg {
+		transition: fill 0.3s;
+	}
 
-	&__item {
-		border: 1px solid transparent;
-		border-radius: 4px;
-		transition: border-color 0.3s;
-
-		&:hover {
-			border-color: $first;
-		}
+	&__item {		
 
 		&:not(:last-child) {
 			margin-right: 35px;
@@ -880,5 +879,11 @@ path {
 				margin-right: 15px;
 			}
 		}
-	}
+		
+		&:hover {
+			.footer__svg {
+				fill: $second;
+			}
+		}
+	}	
 }
